@@ -1,6 +1,25 @@
+# Core
 streamlit
 pandas
-PyPDF2
-gTTS
-moviepy
+numpy
 openai
+
+# Data & ML
+scikit-learn
+matplotlib
+seaborn
+statsmodels
+
+# NLP / Embeddings
+langchain
+faiss-cpu
+tiktoken
+
+# Content Tools
+moviepy
+gTTS
+PyPDF2
+
+# Extra Utilities
+requests
+python-dotenv
