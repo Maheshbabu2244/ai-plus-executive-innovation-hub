@@ -5,6 +5,7 @@ import re
 
 st.set_page_config(page_title="AI+ Executive Innovation Hub", page_icon="🚀", layout="wide")
 
+# Directory for user analytics
 DATA_DIR = "user_data"
 if not os.path.exists(DATA_DIR):
     os.makedirs(DATA_DIR)
@@ -26,6 +27,7 @@ def log_activity(username, activity, details=""):
     df.to_csv(analytics_file, index=False)
 
 def main():
+    # Load API key securely
     st.session_state.api_key = st.secrets.get("OPENAI_API_KEY", "")
 
     if 'username' not in st.session_state:
@@ -42,12 +44,14 @@ def main():
 
     st.sidebar.title(f"Welcome, {st.session_state.username}!")
     st.sidebar.markdown("---")
-    if not st.session_state.api_key:
-        st.sidebar.error("OpenAI API Key not found. Please add it to your app's secrets.")
-    else:
-        st.sidebar.success("OpenAI API Key loaded securely!")
-    st.sidebar.markdown("---")
 
+    # API key validation
+    if not st.session_state.api_key:
+        st.sidebar.error("❌ OpenAI API Key not found. Please add it to your app's secrets.")
+    else:
+        st.sidebar.success("✅ OpenAI API Key loaded securely!")
+
+    st.sidebar.markdown("---")
     st.title("🚀 AI+ Executive Innovation Hub")
     st.write("Select a tool from the sidebar to begin.")
 
