@@ -14,12 +14,13 @@ statsmodels
 langchain
 faiss-cpu
 tiktoken
-
-# Content Tools
-moviepy
-gTTS
 PyPDF2
 
-# Extra Utilities
+# Content Tools
+moviepy==1.0.3
+gTTS
+Pillow
+
+# Utilities
 requests
 python-dotenv
