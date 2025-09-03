@@ -3,6 +3,7 @@ streamlit
 pandas
 numpy
 openai
+langchain_anthropic
 
 # Data & ML
 scikit-learn
